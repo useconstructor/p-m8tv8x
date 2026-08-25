@@ -1,4 +1,41 @@
 import Link from "next/link";
+import FaqSection from "./components/FaqSection";
+
+const features = [
+  { num: "01", title: "Answer Questions", desc: "Ask anything about your business and Supervisor searches the right tools and returns the answer with sources." },
+  { num: "02", title: "Automatic Smart Supervision", desc: "Automatically monitor that everything is running as expected and get alerts when something needs attention." },
+  { num: "03", title: "Smart Permissions", desc: "Control who can see what and who can do what, with fine-grained role-based permissions." },
+  { num: "04", title: "Available Everywhere", desc: "Use Supervisor on mobile, desktop, or anywhere your team already works — web, iOS, Android." },
+  { num: "05", title: "Integrate With Any Source", desc: "Connect your existing tools, files, databases, and APIs. Supervisor finds the signal across all of them." },
+  { num: "06", title: "Schedule Actions", desc: "Set up recurring checks and processes once; Supervisor runs them on time, every time." },
+  { num: "07", title: "Build Mini Apps", desc: "Build focused internal tools like scanners, live maps, and order queues just by describing them." },
+  { num: "08", title: "Device Plugins", desc: "Extend Supervisor to cameras, sensors, and hardware already plugged into your operation." },
+  { num: "09", title: "Secure, Encrypted and Compliant", desc: "Enterprise-grade encryption and access controls keep your business data safe and auditable." },
+  { num: "10", title: "Offline Support", desc: "Keep working when the connection drops. Supervisor syncs automatically when you're back online." },
+]
+
+const testimonials = [
+  {
+    quote: "It feels like an operator who never forgets the boring but important parts of the business.",
+    name: "Jordan Lee",
+    role: "General Manager, Harbor House",
+  },
+  {
+    quote: "Approvals got faster because everyone can see the why before they make the call.",
+    name: "Sofia Alvarez",
+    role: "",
+  },
+  {
+    quote: "Supervisor helped us connect field updates, customer requests, and schedules into one calm workflow.",
+    name: "Noah Bennett",
+    role: "Head of Service",
+  },
+  {
+    quote: "Our team finally trusts the process because Supervisor keeps everyone aligned and accountable.",
+    name: "Shah",
+    role: "Studio",
+  },
+]
 
 export default function Page() {
   return (
@@ -41,7 +78,7 @@ export default function Page() {
               </Link>
             </div>
           </section>
-          
+
           {/* Feature Buttons Grid */}
           <div className="mt-auto grid min-h-56 grid-cols-2 grid-rows-2 border-t border-b border-gray-200">
             <button className="group relative flex min-h-28 flex-col items-start justify-center overflow-hidden border-gray-200 p-3 text-left transition-colors hover:bg-white bg-white border-r border-b" type="button">
@@ -57,7 +94,7 @@ export default function Page() {
                 </div>
               </div>
             </button>
-            
+
             <button className="group relative flex min-h-28 flex-col items-start justify-center overflow-hidden border-gray-200 p-3 text-left transition-colors hover:bg-white border-b" type="button">
               <div className="flex w-full items-stretch gap-4">
                 <div className="flex aspect-square min-h-16 shrink-0 items-center justify-center rounded-sm border border-gray-200 bg-gray-50 text-gray-900 transition-colors group-hover:bg-white">
@@ -78,7 +115,7 @@ export default function Page() {
                 </div>
               </div>
             </button>
-            
+
             <button className="group relative flex min-h-28 flex-col items-start justify-center overflow-hidden border-gray-200 p-3 text-left transition-colors hover:bg-white border-r" type="button">
               <div className="flex w-full items-stretch gap-4">
                 <div className="flex aspect-square min-h-16 shrink-0 items-center justify-center rounded-sm border border-gray-200 bg-gray-50 text-gray-900 transition-colors group-hover:bg-white">
@@ -93,7 +130,7 @@ export default function Page() {
                 </div>
               </div>
             </button>
-            
+
             <button className="group relative flex min-h-28 flex-col items-start justify-center overflow-hidden border-gray-200 p-3 text-left transition-colors hover:bg-white" type="button">
               <div className="flex w-full items-stretch gap-4">
                 <div className="flex aspect-square min-h-16 shrink-0 items-center justify-center rounded-sm border border-gray-200 bg-gray-50 text-gray-900 transition-colors group-hover:bg-white">
@@ -111,7 +148,7 @@ export default function Page() {
             </button>
           </div>
         </div>
-        
+
         {/* Right Column - Phone and Features */}
         <div className="h-full">
           <div className="h-full w-full">
@@ -121,12 +158,11 @@ export default function Page() {
                 <div className="flex h-full w-full items-center justify-center">
                   <div className="relative w-48 lg:w-72 max-w-full">
                     <div className="absolute inset-x-[5%] top-[2%] bottom-[2.5%] z-0 overflow-hidden rounded-[2rem] bg-white">
-                      <img 
-                        alt="" 
-                        className="pointer-events-none absolute inset-x-0 top-0.5 z-20 h-auto w-full" 
+                      <img
+                        alt=""
+                        className="pointer-events-none absolute inset-x-0 top-0.5 z-20 h-auto w-full"
                         src="https://trysupervisor.com/_next/image?url=%2Fimages%2Fiphone-status-bar.png&w=3840&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
                       />
-                      {/* Phone Content Preview */}
                       <div className="w-full h-full pt-8 px-3">
                         <div className="bg-gray-50 rounded-lg p-3 mb-2">
                           <div className="text-xs text-gray-500 mb-1">Question desk</div>
@@ -136,15 +172,15 @@ export default function Page() {
                         </div>
                       </div>
                     </div>
-                    <img 
-                      alt="iPhone frame" 
-                      className="relative z-10 h-auto w-full" 
+                    <img
+                      alt="iPhone frame"
+                      className="relative z-10 h-auto w-full"
                       src="https://trysupervisor.com/_next/image?url=%2Fimages%2Fiphone-17-black-portrait.png&w=3840&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
                     />
                   </div>
                 </div>
               </div>
-              
+
               {/* Feature Cards */}
               <div className="grid grid-rows-4 divide-y divide-gray-200">
                 <div className="p-4 bg-white">
@@ -159,7 +195,7 @@ export default function Page() {
                     <span>2 actions</span>
                   </div>
                 </div>
-                
+
                 <div className="p-4 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-gray-500">Operations watch</span>
@@ -172,7 +208,7 @@ export default function Page() {
                     <span>4 alerts</span>
                   </div>
                 </div>
-                
+
                 <div className="p-4 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-gray-500">Scheduled actions</span>
@@ -185,7 +221,7 @@ export default function Page() {
                     <span>7 routines</span>
                   </div>
                 </div>
-                
+
                 <div className="p-4 bg-white">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-gray-500">Mini apps</span>
@@ -204,75 +240,26 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="border-b border-gray-200 py-8 lg:py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">118</div>
-            <div className="text-sm text-gray-500 mt-1">Questions answered</div>
-            <div className="text-xs text-gray-400">Sourced answers delivered</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">104</div>
-            <div className="text-sm text-gray-500 mt-1">Alerts reviewed</div>
-            <div className="text-xs text-gray-400">Signals checked automatically</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">86</div>
-            <div className="text-sm text-gray-500 mt-1">Scheduled runs</div>
-            <div className="text-xs text-gray-400">Checks completed on cadence</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">41</div>
-            <div className="text-sm text-gray-500 mt-1">Mini apps built</div>
-            <div className="text-xs text-gray-400">Internal tools generated</div>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 px-4 mt-8 pt-8 border-t border-gray-200">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">280</div>
-            <div className="text-sm text-gray-500 mt-1">Sources searched</div>
-            <div className="text-xs text-gray-400">Docs, tools, and records covered</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">97%</div>
-            <div className="text-sm text-gray-500 mt-1">Answer speed</div>
-            <div className="text-xs text-gray-400">Questions resolved without handoff</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">99%</div>
-            <div className="text-sm text-gray-500 mt-1">On-time checks</div>
-            <div className="text-xs text-gray-400">Runs completed before deadline</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-gray-900">4.9</div>
-            <div className="text-sm text-gray-500 mt-1">Builder satisfaction</div>
-            <div className="text-xs text-gray-400">Average internal tool rating</div>
-          </div>
-        </div>
-      </section>
-
       {/* How it Works Section */}
       <section className="border-b border-gray-200 py-12 lg:py-16 px-4">
         <div className="flex items-center gap-2 font-mono text-lg font-normal uppercase leading-none tracking-normal text-gray-500 mb-4">
           <span>SET IT UP IN 5 MINUTES</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">How it Works.</h2>
-        
+
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col">
             <div className="text-6xl font-light text-gray-300 mb-4">01</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Connect and Explain</h3>
             <p className="text-gray-500">Link your tools, files and workflows, give us as much context as possible about how your business works.</p>
           </div>
-          
+
           <div className="flex flex-col">
             <div className="text-6xl font-light text-gray-300 mb-4">02</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Invite your Team</h3>
             <p className="text-gray-500">It's as simple as entering their email and role, we'll handle the rest.</p>
           </div>
-          
+
           <div className="flex flex-col">
             <div className="text-6xl font-light text-gray-300 mb-4">03</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Start using it</h3>
@@ -282,17 +269,17 @@ export default function Page() {
       </section>
 
       {/* Industries Section */}
-      <section className="py-12 lg:py-16 px-4">
+      <section className="border-b border-gray-200 py-12 lg:py-16 px-4">
         <div className="flex items-center gap-2 font-mono text-lg font-normal uppercase leading-none tracking-normal text-gray-500 mb-4">
           <span>Industries</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Built around the way your team actually operates.</h2>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           <Link href="/for/startup" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-            <img 
-              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fstartup-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf" 
-              alt="Startup" 
+            <img
+              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fstartup-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
+              alt="Startup"
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
@@ -301,11 +288,11 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/local-business" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-            <img 
-              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flocal-business-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf" 
-              alt="Local Business" 
+            <img
+              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flocal-business-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
+              alt="Local Business"
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
@@ -314,11 +301,11 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/logistics" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-            <img 
-              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flogistics-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf" 
-              alt="Logistics" 
+            <img
+              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flogistics-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
+              alt="Logistics"
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
@@ -327,11 +314,11 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/non-profits" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-            <img 
-              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fnon-profits-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf" 
-              alt="Non Profits" 
+            <img
+              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fnon-profits-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
+              alt="Non Profits"
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
@@ -340,11 +327,11 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/restaurants" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
-            <img 
-              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Frestaurants-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf" 
-              alt="Restaurants" 
+            <img
+              src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Frestaurants-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
+              alt="Restaurants"
               className="w-full h-40 object-cover"
             />
             <div className="p-4">
@@ -353,7 +340,7 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/hotels-and-stays" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
@@ -362,7 +349,7 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/ecommerce" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
@@ -371,7 +358,7 @@ export default function Page() {
               <span className="text-sm text-[#ff4f00] mt-2 inline-block">See More</span>
             </div>
           </Link>
-          
+
           <Link href="/for/field-services" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
@@ -382,6 +369,90 @@ export default function Page() {
           </Link>
         </div>
       </section>
+
+      {/* Ready to Get Started CTA */}
+      <section className="border-b border-gray-200 py-16 lg:py-24 px-4">
+        <div className="max-w-3xl">
+          <div className="flex items-center gap-2 font-mono text-sm font-normal uppercase leading-none tracking-normal text-gray-500 mb-4">
+            <svg aria-hidden="true" className="size-3.5 shrink-0 scale-95 text-[#ff4f00]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1H19V19M1 19L19 1" stroke="currentColor" strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2"></path>
+            </svg>
+            <span>START MAKING YOUR BUSINESS RUN ITSELF</span>
+          </div>
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">Ready to Get Started?</h2>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/book-a-call"
+              className="group inline-flex shrink-0 items-center border bg-white border-gray-200 whitespace-nowrap transition-all outline-none select-none hover:bg-gray-100 h-11 cursor-pointer justify-center gap-2 rounded-sm px-7 text-sm font-medium"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4" aria-hidden="true">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+              </svg>
+              Book a Call
+            </Link>
+            <Link
+              href="/app"
+              className="group inline-flex shrink-0 items-center border border-transparent bg-gray-900 text-white whitespace-nowrap transition-all outline-none select-none hover:bg-gray-800 h-11 cursor-pointer justify-center gap-2 rounded-sm px-7 text-sm font-medium"
+            >
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="size-4" aria-hidden="true">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="border-b border-gray-200 py-12 lg:py-16 px-4">
+        <div className="flex items-center gap-2 font-mono text-sm font-normal uppercase leading-none tracking-normal text-gray-500 mb-4">
+          <svg aria-hidden="true" className="size-3.5 shrink-0 scale-95 text-[#ff4f00]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H19V19M1 19L19 1" stroke="currentColor" strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2"></path>
+          </svg>
+          <span>WHAT IT CAN DO</span>
+        </div>
+        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Features.</h2>
+        <div className="grid md:grid-cols-2 divide-y md:divide-y-0 border-y border-gray-200">
+          {features.map((feature, i) => (
+            <div
+              key={feature.num}
+              className={`flex items-start gap-6 py-6 px-2 ${i % 2 === 0 ? 'md:border-r md:pr-10' : 'md:pl-10'} ${i < features.length - 2 ? 'md:border-b' : ''} border-gray-200`}
+            >
+              <span className="font-mono text-sm text-gray-400 shrink-0 mt-0.5">{feature.num}</span>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+                <p className="text-sm text-gray-500 leading-6">{feature.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="border-b border-gray-200 py-12 lg:py-16 px-4">
+        <div className="flex items-center gap-2 font-mono text-sm font-normal uppercase leading-none tracking-normal text-gray-500 mb-4">
+          <svg aria-hidden="true" className="size-3.5 shrink-0 scale-95 text-[#ff4f00]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1H19V19M1 19L19 1" stroke="currentColor" strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2"></path>
+          </svg>
+          <span>WHAT PEOPLE SAY</span>
+        </div>
+        <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Testimonials.</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {testimonials.map((t) => (
+            <div key={t.name} className="border border-gray-200 rounded-sm p-6 flex flex-col gap-4">
+              <p className="text-gray-700 text-base leading-7">"{t.quote}"</p>
+              <div>
+                <div className="font-semibold text-gray-900 text-sm">{t.name}</div>
+                {t.role && <div className="text-sm text-gray-500">{t.role}</div>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <FaqSection />
     </main>
   );
 }

@@ -132,13 +132,13 @@ export default function SiteHeader() {
 
         <div className="hidden lg:flex items-center gap-3">
           <Link
-            href="/"
+            href="/book-a-call"
             className="inline-flex h-9 items-center justify-center px-4 text-sm font-medium text-gray-900 hover:text-gray-600 transition-colors"
           >
-            Log in
+            Book a Call
           </Link>
           <Link
-            href="/"
+            href="/app"
             className="inline-flex h-9 items-center justify-center rounded-md bg-gray-900 px-4 text-sm font-medium text-white hover:bg-gray-800 transition-colors"
           >
             Get Started
@@ -247,14 +247,14 @@ export default function SiteHeader() {
 
             <div className="flex flex-col gap-3 mt-6">
               <Link
-                href="/"
+                href="/book-a-call"
                 className="inline-flex h-11 items-center justify-center text-base font-medium text-gray-900"
                 onClick={handleMobileLinkClick}
               >
-                Log in
+                Book a Call
               </Link>
               <Link
-                href="/"
+                href="/app"
                 className="inline-flex h-11 items-center justify-center rounded-md bg-gray-900 text-base font-medium text-white"
                 onClick={handleMobileLinkClick}
               >
