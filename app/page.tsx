@@ -249,18 +249,21 @@ export default function Page() {
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="flex flex-col">
+            <div className="w-full h-32 bg-gray-100 rounded-lg mb-6"></div>
             <div className="text-6xl font-light text-gray-300 mb-4">01</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Connect and Explain</h3>
             <p className="text-gray-500">Link your tools, files and workflows, give us as much context as possible about how your business works.</p>
           </div>
 
           <div className="flex flex-col">
+            <div className="w-full h-32 bg-gray-100 rounded-lg mb-6"></div>
             <div className="text-6xl font-light text-gray-300 mb-4">02</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Invite your Team</h3>
             <p className="text-gray-500">It's as simple as entering their email and role, we'll handle the rest.</p>
           </div>
 
           <div className="flex flex-col">
+            <div className="w-full h-32 bg-gray-100 rounded-lg mb-6"></div>
             <div className="text-6xl font-light text-gray-300 mb-4">03</div>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Start using it</h3>
             <p className="text-gray-500">Set it up in your favorite platform.</p>
@@ -413,17 +416,23 @@ export default function Page() {
           <span>SUPERVISOR DOES ALMOST EVERYTHING</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Features.</h2>
-        <div className="grid md:grid-cols-2 divide-y md:divide-y-0 border-y border-gray-200">
+        <div className="grid md:grid-cols-2 border-y border-gray-200 divide-y divide-gray-200 md:divide-y-0">
           {features.map((feature, i) => (
             <div
               key={feature.num}
-              className={`flex items-start gap-6 py-6 px-2 ${i % 2 === 0 ? 'md:border-r md:pr-10' : 'md:pl-10'} ${i < features.length - 2 ? 'md:border-b' : ''} border-gray-200`}
+              className={`py-6 px-4 ${i % 2 === 0 ? 'md:border-r md:border-gray-200' : ''} ${i < features.length - 2 ? 'border-b border-gray-200' : ''}`}
             >
-              <span className="font-mono text-sm text-gray-400 shrink-0 mt-0.5">{feature.num}</span>
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
-                <p className="text-sm text-gray-500 leading-6">{feature.desc}</p>
+              <div className="flex items-center justify-between mb-3">
+                <span className="font-mono text-sm text-gray-400">{feature.num}</span>
+                <Link href="/use-cases" className="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-1 transition-colors">
+                  See More
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+                  </svg>
+                </Link>
               </div>
+              <h3 className="font-semibold text-gray-900 mb-1">{feature.title}</h3>
+              <p className="text-sm text-gray-500 leading-6">{feature.desc}</p>
             </div>
           ))}
         </div>
