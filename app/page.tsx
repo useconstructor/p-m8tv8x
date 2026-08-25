@@ -278,8 +278,8 @@ export default function Page() {
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Built around the way your team actually operates.</h2>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-          <Link href="/for/startup" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+        <div className="flex gap-4 overflow-x-auto pb-2" style={{scrollbarWidth: 'none'}}>
+          <Link href="/for/startup" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <img
               src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fstartup-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
               alt="Startup"
@@ -292,7 +292,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/local-business" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/local-business" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <img
               src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flocal-business-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
               alt="Local Business"
@@ -305,7 +305,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/logistics" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/logistics" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <img
               src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Flogistics-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
               alt="Logistics"
@@ -318,7 +318,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/non-profits" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/non-profits" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <img
               src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Fnon-profits-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
               alt="Non Profits"
@@ -331,7 +331,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/restaurants" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/restaurants" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <img
               src="https://trysupervisor.com/_next/image?url=%2Fimages%2Findustries%2Fcurated%2Frestaurants-grid.webp&w=1920&q=75&dpl=dpl_D9vqmuDy7TmJjfKwoUsiuN7YFRuf"
               alt="Restaurants"
@@ -344,7 +344,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/hotels-and-stays" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/hotels-and-stays" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
               <h3 className="font-semibold text-gray-900">Hotels and Stays</h3>
@@ -353,7 +353,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/ecommerce" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/ecommerce" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
               <h3 className="font-semibold text-gray-900">Ecommerce</h3>
@@ -362,7 +362,7 @@ export default function Page() {
             </div>
           </Link>
 
-          <Link href="/for/field-services" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors">
+          <Link href="/for/field-services" className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-gray-300 transition-colors shrink-0 w-64">
             <div className="w-full h-40 bg-gray-100"></div>
             <div className="p-4">
               <h3 className="font-semibold text-gray-900">Field Services</h3>
@@ -413,7 +413,7 @@ export default function Page() {
           <svg aria-hidden="true" className="size-3.5 shrink-0 scale-95 text-[#ff4f00]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1H19V19M1 19L19 1" stroke="currentColor" strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2"></path>
           </svg>
-          <span>SUPERVISOR DOES ALMOST EVERYTHING</span>
+          <span>START MAKING YOUR BUSINESS RUN ITSELF</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Features.</h2>
         <div className="grid md:grid-cols-3 border-y border-gray-200 divide-y divide-gray-200 md:divide-y-0">
