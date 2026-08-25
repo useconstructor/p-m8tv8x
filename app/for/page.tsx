@@ -119,24 +119,22 @@ export default function Page() {
   const IndustryCard = ({ industry, className = "" }: { industry: typeof industries[0]; className?: string }) => (
     <Link
       href={industry.href}
-      className={`group relative flex flex-col overflow-hidden border border-gray-200 bg-white transition-all hover:shadow-lg ${className}`}
+      className={`group flex flex-col border-gray-200 bg-white transition-colors hover:bg-gray-50 ${className}`}
     >
-      <div className="relative aspect-[4/3] w-full overflow-hidden">
+      <div className="flex items-center justify-between px-5 pt-4 pb-2">
+        <span className="font-mono text-sm text-gray-400">{industry.num}</span>
+        <span className="text-sm text-gray-500 group-hover:text-gray-700">See More</span>
+      </div>
+      <div className="flex items-center justify-center px-4 py-2">
         <img
           src={industry.image}
           alt={industry.title}
-          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          className="h-40 w-full object-contain"
         />
       </div>
-      <div className="flex flex-1 flex-col justify-between p-4">
-        <div>
-          <div className="flex items-center gap-2 text-sm text-gray-500">
-            <span className="font-mono">{industry.num}</span>
-            <span className="text-[#ff4f00]">See More</span>
-          </div>
-          <h2 className="mt-2 text-xl font-medium text-gray-900">{industry.title}</h2>
-        </div>
-        <p className="mt-2 text-sm leading-relaxed text-gray-600">{industry.description}</p>
+      <div className="px-5 pb-5">
+        <h2 className="text-xl font-medium text-gray-900 mb-1">{industry.title}</h2>
+        <p className="text-sm leading-relaxed text-gray-600">{industry.description}</p>
       </div>
     </Link>
   );
