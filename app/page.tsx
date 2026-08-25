@@ -410,7 +410,7 @@ export default function Page() {
           <svg aria-hidden="true" className="size-3.5 shrink-0 scale-95 text-[#ff4f00]" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
             <path d="M1 1H19V19M1 19L19 1" stroke="currentColor" strokeLinecap="square" strokeLinejoin="miter" strokeWidth="2"></path>
           </svg>
-          <span>WHAT IT CAN DO</span>
+          <span>SUPERVISOR DOES ALMOST EVERYTHING</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Features.</h2>
         <div className="grid md:grid-cols-2 divide-y md:divide-y-0 border-y border-gray-200">
