@@ -416,11 +416,11 @@ export default function Page() {
           <span>SUPERVISOR DOES ALMOST EVERYTHING</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Features.</h2>
-        <div className="grid md:grid-cols-2 border-y border-gray-200 divide-y divide-gray-200 md:divide-y-0">
+        <div className="grid md:grid-cols-3 border-y border-gray-200 divide-y divide-gray-200 md:divide-y-0">
           {features.map((feature, i) => (
             <div
               key={feature.num}
-              className={`py-6 px-4 ${i % 2 === 0 ? 'md:border-r md:border-gray-200' : ''} ${i < features.length - 2 ? 'border-b border-gray-200' : ''}`}
+              className={`py-6 px-4 ${i % 3 !== 2 ? 'md:border-r md:border-gray-200' : ''} ${i < features.length - 3 ? 'border-b border-gray-200' : ''}`}
             >
               <div className="flex items-center justify-between mb-3">
                 <span className="font-mono text-sm text-gray-400">{feature.num}</span>
@@ -447,7 +447,7 @@ export default function Page() {
           <span>WHAT PEOPLE SAY</span>
         </div>
         <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-12">Testimonials.</h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t) => (
             <div key={t.name} className="border border-gray-200 rounded-sm p-6 flex flex-col gap-4">
               <p className="text-gray-700 text-base leading-7">"{t.quote}"</p>
